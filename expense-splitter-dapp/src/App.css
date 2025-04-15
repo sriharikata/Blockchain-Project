@@ -1,0 +1,36 @@
+
+.App {
+  background: transparent;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+}
+
+/* Navbar specific styles - add to App.css */
+.navbar {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.navbar-custom {
+  background-color: #1e1e2f;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  font-size: 1.1rem;
+}

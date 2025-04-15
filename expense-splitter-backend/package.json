@@ -1,14 +1,13 @@
 {
   "name": "expense-splitter-backend",
   "version": "1.0.0",
+  "description": "Backend for Expense Splitter DApp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Srihari",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "aws-sdk": "^2.1692.0",
     "cors": "^2.8.5",

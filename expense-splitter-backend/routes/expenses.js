@@ -38,6 +38,11 @@ router.get("/group/:groupId/balance", async (req, res) => {
       const paidBy = expense.paidBy.toLowerCase();
       const splitDetails = expense.splitDetails || {};
 
+      console.log("Expense:");
+      console.log("Paid By:", paidBy);
+      console.log("Split Details:", splitDetails);
+
+
       Object.entries(splitDetails).forEach(([addr, amt]) => {
         const member = addr.toLowerCase();
         const value = parseFloat(amt);
@@ -60,6 +65,11 @@ router.get("/group/:groupId/balance", async (req, res) => {
       const name = nameMap[addr] || addr;
       namedBalances[name] = parseFloat(amt.toFixed(4));
     });
+    console.log("\n=== 🧾 Group Balance Debug ===");
+    console.log("Group ID:", groupId);
+    console.log("Named Balances:", namedBalances);
+    console.log("Raw Balances:", rawBalances);
+    console.log("=============================\n");
 
     res.status(200).json(namedBalances);
   } catch (err) {
